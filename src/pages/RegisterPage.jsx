@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-// import { HiOutlinePhotograph } from 'react-icons/Hi';
+import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
 import { useAuthContext } from '../context/AuthContext';
 
 
@@ -37,7 +37,7 @@ export const RegisterPage = () => {
 
           <input type="file" id='file' onChange={showPhotoName}/>
           <label htmlFor='file'>
-            {/* <HiOutlinePhotograph /> */}
+            <AddPhotoAlternateIcon />
             <span>{photoName || 'Add an avatar'}</span>
           </label>
           

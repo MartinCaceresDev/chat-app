@@ -1,6 +1,6 @@
-import { AiOutlineCamera } from 'react-icons/Ai';
-import { AiOutlineUserAdd } from 'react-icons/Ai';
-import { BsThreeDots } from 'react-icons/Bs';
+import AddAPhotoIcon from '@mui/icons-material/AddAPhoto';
+import PersonAddIcon from '@mui/icons-material/PersonAdd';
+import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import { useChatsContext } from '../context/ChatsContext';
 import { Messages, Input } from "./"
 
@@ -16,15 +16,15 @@ export const Chat = () => {
 
         <div className="chatIcons">
           <div className='icon'>
-            <AiOutlineCamera />
+            <AddAPhotoIcon />
           </div>
 
           <div className='icon'>
-            <AiOutlineUserAdd />
+            <PersonAddIcon />
           </div>
 
           <div className='icon'>
-            <BsThreeDots />
+            <MoreHorizIcon />
           </div>
         </div>
       </div>

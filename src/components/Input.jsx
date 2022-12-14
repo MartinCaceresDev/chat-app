@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { arrayUnion, doc, serverTimestamp, Timestamp, updateDoc } from 'firebase/firestore';
 import { getDownloadURL, uploadBytes } from 'firebase/storage';
-import { HiOutlinePhotograph } from 'react-icons/Hi';
+import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
 import { v4 as uuid } from 'uuid';
 import { useAuthContext } from '../context/AuthContext';
 import { useChatsContext } from '../context/ChatsContext';
@@ -82,7 +82,7 @@ export const Input = () => {
         />
         <label htmlFor="file">
           <div className='icon'>
-            <HiOutlinePhotograph />
+            <AddPhotoAlternateIcon />
           </div>
         </label>
 

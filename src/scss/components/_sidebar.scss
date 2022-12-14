@@ -26,6 +26,7 @@
         .user {
           display: flex;
           gap: 0.7rem;
+          align-items: center;
 
           img {
             background-color: $lightColor;
@@ -41,6 +42,7 @@
             font-size: 0.7rem;
             border: none;
             cursor: pointer;
+            padding: 0.4rem 0.8rem;
 
             @include tablet {
               position: absolute;
@@ -55,6 +57,7 @@
         border-bottom: 1px solid gray;
 
         .searchForm {
+          padding: 0.6rem;
 
           input {
             background-color: transparent;
