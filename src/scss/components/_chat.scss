@@ -28,7 +28,7 @@
       .messages {
         background-color: $lightColor;
         padding: 0.7rem;
-        overflow: scroll;
+        overflow-y: scroll;
         flex-grow: 1;
 
         .message {
