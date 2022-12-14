@@ -1,0 +1,131 @@
+    @use '../abstracts/variables' as *;
+    
+    .chat {
+      flex: 2;
+
+      .chatInfo {
+        height: 3rem;
+        background-color: $chatInfo-bg;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.7rem;
+        color: lightgray;
+      }
+
+      .chatIcons {
+        display: flex;
+        gap: 0.7rem;
+
+        img {
+          height: 1.5rem;
+          cursor: pointer;
+        }
+      }
+
+      .messages {
+        background-color: $lightColor;
+        padding: 0.7rem;
+        height: calc(100% - 10rem);
+        overflow: scroll;
+
+        .message {
+          display: flex;
+          gap: 1.25rem;
+          margin-bottom: 1.25rem;
+
+          .messageInfo {
+            display: flex;
+            flex-direction: column;
+            color: gray;
+            font-weight: 300;
+
+            img {
+              width: 2.5rem;
+              height: 2.5rem;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+          }
+
+          .messageContent {
+            max-width: 80%;
+            display: flex;
+            flex-direction: column;
+            gap: 0.7rem;
+
+            p {
+              background-color: white;
+              padding: 0.7rem 1.4rem;
+              border-radius: 0 0.7rem 0.7rem 0.7rem;
+              max-width: max-content;
+            }
+
+            img {
+              width: 50%;
+            }
+          }
+
+          &.owner {
+            flex-direction: row-reverse;
+
+            .messageContent {
+              align-items: flex-end;
+            }
+
+            p {
+              background-color: $send-btn-bg;
+              color: white;
+              border-radius: 0.7rem 0 0.7rem 0.7rem;
+            }
+          }
+        }
+      }
+      
+   
+      .input {
+        height: 3rem;
+        background-color: white;
+        padding: 0.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        
+        input {
+          outline: none;
+          width: 100%;
+          border: none;
+          color: $sidebarNav-bg;
+          font-size: 1.2rem;
+          
+          &::placeholder {
+            color: lightgray;
+          }
+
+          &[type='file'] {
+            display: none;
+          }
+        }
+        
+
+        .send {
+          display: flex;
+          align-items: center;
+          gap: 0.7rem;
+
+          .icon {
+            height: 1.5rem;
+            cursor: pointer;
+          }
+
+          button {
+            border: none;
+            padding: 0.7rem 1.1rem;
+            color: white;
+            cursor: pointer;
+            background-color: $send-btn-bg;
+          }
+        }
+      }
+    }

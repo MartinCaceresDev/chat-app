@@ -1,0 +1,79 @@
+@use '../abstracts/variables' as *;
+
+.formContainer {
+  background-color: $bgColor;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .formWrapper {
+    background-color: white;
+    padding: 20px 60px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+
+    .logo {
+      color: $chatInfo-bg;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .title {
+      color: $chatInfo-bg;
+      font-size: 0.75rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      input {
+        padding: 1rem;
+        border: none;
+        border-bottom: 1px solid $bgColor;
+        width: 15rem;
+
+        &::placeholder {
+          color: rgb(175, 175, 175);
+        }
+      }
+
+      [type='file'] {
+        display: none;
+      }
+
+      label {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        color: $addAvatarText;
+        font-size: 0.75rem;
+        cursor: pointer;
+
+        img {
+          width: 2rem;
+        }
+      }
+
+      button {
+        background-color: #7b96ec;
+        color: white;
+        padding: 0.6rem;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+      }
+    }
+
+    p {
+      color: $chatInfo-bg;
+      font-size: 0.75rem;
+      margin-top: 0.6rem;
+    }
+  }
+}

@@ -1,0 +1,247 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.home {
+  background-color: $bgColor;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .container {
+    border: 1px solid white;
+    border-radius: 0.7rem;
+    width: 65%;
+    height: 80%;
+    display: flex;
+    overflow: hidden;
+
+    @include tablet {
+      width: 90%;
+    }
+
+    // .sidebar {
+    //   flex: 1;
+    //   background-color: #3e3c61;
+    //   position: relative;
+
+    //   .navbar {
+    //     display: flex;
+    //     align-items: center;
+    //     background-color: $dark;
+    //     height: 3rem;
+    //     padding: 0.7rem;
+    //     justify-content: space-between;
+    //     color: $lightColor;
+
+    //     .logo {
+    //       font-weight: bold;
+
+    //       @include tablet {
+    //         display: none;
+    //       }
+    //     }
+
+    //     .user {
+    //       display: flex;
+    //       gap: 0.7rem;
+
+    //       img {
+    //         background-color: $lightColor;
+    //         height: 1.5rem;
+    //         width: 1.5rem;
+    //         border-radius: 50%;
+    //         object-fit: cover;
+    //       }
+
+    //       button {
+    //         background-color: $color;
+    //         color: $lightColor;
+    //         font-size: 0.7rem;
+    //         border: none;
+    //         cursor: pointer;
+
+    //         @include tablet {
+    //           position: absolute;
+    //           bottom: 0.7rem;
+    //         }
+    //       }
+    //     }
+
+    //   }
+
+    //   .search {
+    //     border-bottom: 1px solid gray;
+
+    //     .searchForm {
+
+    //       input {
+    //         background-color: transparent;
+    //         border: none;
+    //         color: white;
+    //         outline: none;
+
+    //         &::placeholder {
+    //           color: lightgray;
+    //         }
+    //       }
+    //     }
+    //   }
+
+    //   .userChat {
+    //     padding: 0.7rem;
+    //     display: flex;
+    //     align-items: center;
+    //     gap: 0.7rem;
+    //     color: white;
+    //     cursor: pointer;
+
+    //     &:hover {
+    //       background-color: $dark;
+    //     }
+
+    //     img {
+    //       width: 50px;
+    //       height: 50px;
+    //       border-radius: 50%;
+    //       object-fit: cover;
+    //     }
+
+    //     .userChatInfo {
+    //       span {
+    //         font-size: 1.2rem;
+    //         font-weight: 500;
+    //       }
+
+    //       p {
+    //         font-size: 0.9rem;
+    //         color: lightgray;
+    //       }
+    //     }
+    //   }
+    // }
+
+    // .chat {
+    //   flex: 2;
+
+    //   .chatInfo {
+    //     height: 3rem;
+    //     background-color: $color;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: space-between;
+    //     padding: 0.7rem;
+    //     color: lightgray;
+    //   }
+
+    //   .chatIcons {
+    //     display: flex;
+    //     gap: 0.7rem;
+
+    //     img {
+    //       height: 1.5rem;
+    //       cursor: pointer;
+    //     }
+    //   }
+
+    //   .messages {
+    //     background-color: $lightColor;
+    //     padding: 0.7rem;
+    //     height: calc(100% - 10rem);
+    //     overflow: scroll;
+
+    //     .message {
+    //       display: flex;
+    //       gap: 1.25rem;
+    //       margin-bottom: 1.25rem;
+
+    //       .messageInfo {
+    //         display: flex;
+    //         flex-direction: column;
+    //         color: gray;
+    //         font-weight: 300;
+
+    //         img {
+    //           width: 2.5rem;
+    //           height: 2.5rem;
+    //           border-radius: 50%;
+    //           object-fit: cover;
+    //         }
+    //       }
+
+    //       .messageContent {
+    //         max-width: 80%;
+    //         display: flex;
+    //         flex-direction: column;
+    //         gap: 0.7rem;
+
+    //         p {
+    //           background-color: white;
+    //           padding: 0.7rem 1.4rem;
+    //           border-radius: 0 0.7rem 0.7rem 0.7rem;
+    //           max-width: max-content;
+    //         }
+
+    //         img {
+    //           width: 50%;
+    //         }
+    //       }
+
+    //       &.owner {
+    //         flex-direction: row-reverse;
+
+    //         .messageContent {
+    //           align-items: flex-end;
+    //         }
+
+    //         p {
+    //           background-color: $anotherColor;
+    //           color: white;
+    //           border-radius: 0.7rem 0 0.7rem 0.7rem;
+    //         }
+    //       }
+    //     }
+    //   }
+
+    //   .input {
+    //     height: 3rem;
+    //     background-color: white;
+    //     padding: 0.7rem;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: space-between;
+
+    //     input {
+    //       outline: none;
+    //       width: 100%;
+    //       border: none;
+    //       color: $dark;
+    //       font-size: 1.2rem;
+
+    //       &::placeholder {
+    //         color: lightgray;
+    //       }
+    //     }
+
+    //     .send {
+    //       display: flex;
+    //       align-items: center;
+    //       gap: 0.7rem;
+
+    //       .icon {
+    //         height: 1.5rem;
+    //         cursor: pointer;
+    //       }
+
+    //       button {
+    //         border: none;
+    //         padding: 0.7rem 1.1rem;
+    //         color: white;
+    //         cursor: pointer;
+    //         background-color: $anotherColor;
+    //       }
+    //     }
+    //   }
+    // }
+  }
+}
